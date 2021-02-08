@@ -1,20 +1,18 @@
 package com.rindu.data;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tb_customers")
 public class Customer {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String idcust;
     private String name;
     private String address;
     private String email;
     private String notelp;
-
-    public Customer(String idcust, String name, String address, String email, String notelp) {
-        this.idcust = idcust;
-        this.name = name;
-        this.address = address;
-        this.email = email;
-        this.notelp = notelp;
-    }
 
     public String getIdcust() {
         return idcust;
